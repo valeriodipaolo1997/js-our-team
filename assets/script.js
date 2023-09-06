@@ -1,8 +1,6 @@
 /* Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team. Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
-BONUS 1:
-Trasformare la stringa foto in una immagine effettiva
+
+
 BONUS 2:
 Organizzare i singoli membri in card/schede  */
 
@@ -66,7 +64,10 @@ for (const key in teamMembers) {
 
 
 /*MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe*/
+Stampare le stesse informazioni su DOM sottoforma di stringhe
+BONUS 1:
+Trasformare la stringa foto in una immagine effettiva
+*/
 
 const teamDom = document.querySelector('.row');
 
@@ -74,10 +75,16 @@ for (let i = 0; i < teamMembers.length; i++) {
 
     const teamComponent = teamMembers[i];
 
-    const teamComponentMarkup = `<div>
-    <h4>Nome: ${teamComponent.name}</h4>
-    <h3>Ruolo: ${teamComponent.job}</h3>
-    <img src="${teamComponent.img}" alt="">
+    const teamComponentMarkup =  `<div class="col-4">
+    <div class="card my-3">
+        <div class="card-img">
+            <img class="img-fluid" src="${teamComponent.img}" alt>
+        </div>
+        <div class="card-body">
+            <h4>Nome: ${teamComponent.name}</h4>
+            <h5>Ruolo: ${teamComponent.job}</h5>
+        </div>
+    </div>
 </div>`
 
     teamDom.insertAdjacentHTML('beforeend', teamComponentMarkup);
