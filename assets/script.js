@@ -1,6 +1,4 @@
 /* Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team. Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-MILESTONE 1:
-Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1:
@@ -50,3 +48,16 @@ const teamMembers = [
         img: './assets/img/barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+
+
+/*MILESTONE 1:
+Stampare su console, per ogni membro del team, le informazioni di nome,
+ ruolo e la stringa della foto*/
+
+for (const key in teamMembers) {
+    console.log(teamMembers[key]);
+    console.log(teamMembers[key].name)
+    console.log(teamMembers[key].job)
+    console.log(teamMembers[key].img)
+}
