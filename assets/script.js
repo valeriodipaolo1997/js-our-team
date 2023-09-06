@@ -61,3 +61,32 @@ for (const key in teamMembers) {
     console.log(teamMembers[key].job)
     console.log(teamMembers[key].img)
 }
+
+
+
+
+/*MILESTONE 2:
+Stampare le stesse informazioni su DOM sottoforma di stringhe*/
+
+const teamDom = document.querySelector('.row');
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+    const teamComponent = teamMembers[i];
+
+    const teamComponentMarkup = `<div>
+    <h4>Nome: ${teamComponent.name}</h4>
+    <h3>Ruolo: ${teamComponent.job}</h3>
+    <img src="${teamComponent.img}" alt="">
+</div>`
+
+    teamDom.insertAdjacentHTML('beforeend', teamComponentMarkup);
+
+    //console.log(teamComponent);
+
+    for (const key in teamComponent) {
+
+        console.log(key, teamComponent[key]);
+    }
+
+}
